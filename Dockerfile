@@ -1,2 +1,2 @@
-FROM dockerscoutpolicy/customers-api-service.0.0.8
+FROM ubuntu:20.04
 RUN echo $(uuidgen) > /pnorton-uuid
