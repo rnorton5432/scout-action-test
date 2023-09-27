@@ -39,6 +39,7 @@ jobs:
       - uses: pnorton5432/scout-action@testing
         if: ${{ github.event_name == 'pull_request' }}
         with:
+          organization: dockerscoutpolicy
           command: policy
           image: ${{ env.IMAGE_NAME }}:${{ env.REF_TAG }}
           github-token: ${{ secrets.PR_PAT }}
