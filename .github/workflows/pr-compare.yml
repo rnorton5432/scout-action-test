@@ -41,6 +41,7 @@ jobs:
         with:
           command: compare
           organization: dockerscoutpolicy
+          debug: true
           image: ${{ env.IMAGE_NAME }}:${{ env.REF_TAG }}
           to: ${{ env.IMAGE_NAME }}:${{ env.PUSH_TAG }}
           github-token: ${{ secrets.PR_PAT }}
