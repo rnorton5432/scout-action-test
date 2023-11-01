@@ -41,8 +41,8 @@ jobs:
         with:
           command: compare
           organization: dockerscoutpolicy
-          image: dockerscoutpolicy/customers-api-service:0.0.8
-          to: dockerscoutpolicy/customers-api-service:0.0.7
+          image: ${{ env.IMAGE_NAME }}:${{ env.REF_TAG }}
+          to: ${{ env.IMAGE_NAME }}:${{ env.PUSH_TAG }}
           github-token: ${{ secrets.PR_PAT }}
           exit-on: vulnerability,policy
 
