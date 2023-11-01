@@ -41,9 +41,10 @@ jobs:
         with:
           command: compare
           organization: dockerscoutpolicy
-          image: ${{ env.IMAGE_NAME }}:${{ env.REF_TAG }}
-          to: ${{ env.IMAGE_NAME }}:${{ env.PUSH_TAG }}
+          image: dockerscoutpolicy/customers-api-service:0.0.8
+          to: dockerscoutpolicy/customers-api-service:0.0.7
           github-token: ${{ secrets.PR_PAT }}
+          exit-code: true
 
       - uses: docker/build-push-action@v5
         if: ${{ github.event_name != 'pull_request' }}
