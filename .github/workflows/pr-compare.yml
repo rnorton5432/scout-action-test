@@ -51,3 +51,5 @@ jobs:
           context: .
           push: true
           tags: ${{ env.IMAGE_NAME }}:${{ env.PUSH_TAG }}
+          provenance: true
+          sbom: true
