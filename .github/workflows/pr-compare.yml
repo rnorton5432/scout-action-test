@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: docker.io
-  IMAGE_NAME: dockerscoutpolicy/pnorton-consumer
+  IMAGE_NAME: paulnorton311/gha
   REF_TAG: ${{ github.event.pull_request.head.sha || github.event.after }}
   PUSH_TAG: latest
 
