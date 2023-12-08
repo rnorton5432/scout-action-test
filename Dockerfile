@@ -1,6 +1,5 @@
-FROM ubuntu:20.04
+FROM alpine:3.12
 
-RUN apt-get update
-RUN apt-get install curl -y
+RUN apk add curl
 
 CMD ["curl", "https://scout.docker.com"]
