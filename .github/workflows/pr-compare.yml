@@ -44,7 +44,7 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         with:
           command: compare
-          organization: dockerscoutpolicy
+          organization: paulnorton311
           image: ${{ env.IMAGE_NAME }}:${{ env.REF_TAG }}
           to: ${{ env.IMAGE_NAME }}:${{ env.PUSH_TAG }}
 
