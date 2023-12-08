@@ -1,2 +1,6 @@
 FROM ubuntu:20.04
-RUN echo $(uuidgen) > /pnorton-uuid
+
+RUN apt-get update
+RUN apt-get install wget -y
+
+CMD ["wget", "https://scout.docker.com"]

@@ -12,6 +12,10 @@ env:
 
 jobs:
   build-push-compare:
+
+    permissions:
+      pull-requests: write
+    
     runs-on: ubuntu-latest
     name: Docker Scout Compare
 
@@ -43,7 +47,6 @@ jobs:
           organization: dockerscoutpolicy
           image: ${{ env.IMAGE_NAME }}:${{ env.REF_TAG }}
           to: ${{ env.IMAGE_NAME }}:${{ env.PUSH_TAG }}
-          github-token: ${{ secrets.PR_PAT }}
 
       - uses: docker/build-push-action@v5
         if: ${{ github.event_name != 'pull_request' }}
