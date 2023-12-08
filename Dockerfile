@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
 RUN apt-get update
-RUN apt-get install wget -y
+RUN apt-get install curl -y
 
-CMD ["wget", "https://scout.docker.com"]
+CMD ["curl", "https://scout.docker.com"]

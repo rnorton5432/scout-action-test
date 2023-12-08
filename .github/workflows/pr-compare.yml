@@ -47,6 +47,7 @@ jobs:
           organization: paulnorton311
           image: ${{ env.IMAGE_NAME }}:${{ env.REF_TAG }}
           to: ${{ env.IMAGE_NAME }}:${{ env.PUSH_TAG }}
+          exit-on: policy,vu
 
       - uses: docker/build-push-action@v5
         if: ${{ github.event_name != 'pull_request' }}
