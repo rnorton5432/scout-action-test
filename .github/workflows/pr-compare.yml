@@ -40,7 +40,7 @@ jobs:
           load: true
           tags: ${{ env.IMAGE_NAME }}:${{ env.REF_TAG }}
 
-      - uses: pnorton5432/scout-action@testing
+      - uses: docker/scout-action@v1.2.2
         if: ${{ github.event_name == 'pull_request' }}
         with:
           command: compare
